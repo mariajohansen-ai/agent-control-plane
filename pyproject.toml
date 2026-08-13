@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-control-plane"
+version = "0.1.0"
+description = "A governance-first supervisor for routing, controlling, and auditing multiple AI agents."
+requires-python = ">=3.11"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Maria Johansen"}]
+keywords = ["ai-agents", "agent-orchestration", "governance", "multi-agent", "control-plane"]
+
+[project.scripts]
+agent-control-plane = "agent_control_plane.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
